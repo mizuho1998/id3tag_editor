@@ -7,6 +7,12 @@ YEAR=""
 TRACK=10
 
 
+build:
+	docker build -t id3tag .
+
+run:
+	docker run -it --rm -v $(PWD):/work id3tag /bin/ash
+
 check:
 	mid3v2 "${DIR}/"*
 
